@@ -12,5 +12,27 @@
       crossorigin="anonymous"
     />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>دفترچه تلفن</h1>
+    </header>
+    <form action="#">
+      <input
+        type="text"
+        class="todo-name-input"
+        placeholder="نام و نام خانوادگی"
+      />
+      <input type="number" class="todo-mobile-input" placeholder="شماره" />
+      <div class="type-number">
+        <select class="type-todo">
+          <option value="0">شماره ثابت</option>
+          <option value="1">شماره همراه</option>
+        </select>
+      </div>
+
+      <button type="submit" class="todo-button">
+        <i class="fas fa-plus"></i>
+      </button>
+    </form>
+  </body>
 </html>
