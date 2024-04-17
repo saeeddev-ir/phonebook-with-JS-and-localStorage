@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Iransans";
+  src: local("Iransans"), url(./IRANSansWeb_Medium.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Iransans;
+}
+
+header,
+form {
+  display: flex;
+  min-height: 20vh;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  direction: rtl;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  border: 1px solid #777;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  color: white;
+  background-color: #f86c6b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+form button:hover {
+  background-color: #f65846;
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+.type-number {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.type-number::after,
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #f86c6b;
+  color: white;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  height: 100%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+select {
+  color: #777;
+  width: 10rem;
+  padding: 1rem;
+  font-family: Iransans;
+  font-size: 16px;
+  border: 1px solid #777;
+  border-radius: 0 5px 5px 0;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  background-color: white;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  direction: rtl;
+  font-size: 1.5rem;
+  border: 1px solid #777;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.todo-item {
+  flex: 1;
+  padding: 0 0.5rem;
+  text-align: right;
+  display: flex;
+  flex-flow: column;
+}
+.todo-item span {
+  color: #777;
+  font-size: 16px;
+}
+.trash-btn {
+  background-color: #f86c6b;
+  border: none;
+  color: white;
+  padding: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.fall {
+  transform: translateX(300%) rotateZ(250deg);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  min-width: 30%;
+}
+
+.filter-todo {
+  width: 100%;
+  direction: rtl;
+  display: none;
+}
+
+.fa-trash {
+  pointer-events: none;
+}
